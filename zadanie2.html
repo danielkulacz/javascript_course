@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <title>Zadanie 2</title>
 
-    <script>
+    <script type="text/javascript">
 
+        function wypisz()
+        {
+            var liczba1 = document.getElementById("pole1").value;
+            var liczba2 = document.getElementById("pole2").value;
+            var napis = "";
+
+
+
+            if (liczba1>liczba2) {
+
+                for (i=liczba1; i>=liczba2; i--)
+                {
+                napis = napis+i+" ";
+                }
+            }
+            else if (liczba1<liczba2) {
+
+                for (i=liczba1; i<=liczba2; i++)
+                {
+                napis = napis+i+" ";
+                }
+
+            }
+            else if (liczba1==liczba2) {
+
+                for (i=liczba1; i<=liczba2; i++)
+                {
+                napis = napis+i+" ";
+                }
+
+            }
+
+
+
+            document.getElementById("wynik").innerHTML=napis;
+
+        }
 
 
     </script>
@@ -13,6 +50,13 @@
 
 </head>
 <body>
+
+    <input type="text" id="pole1"/>
+    <input type="text" id="pole2"/>
+    <input type="submit" value="Pokaż" onclick="wypisz()"/>
+
+    <div id="wynik"></div>
+
 
 </body>
 </html>
