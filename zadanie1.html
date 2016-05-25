@@ -9,8 +9,13 @@
         function sprawdz()
         {
             var liczba = document.getElementById("pole").value;
-            document.write(liczba);
 
+            if (liczba>0) document.getElementById("wynik").innerHTML="dodatnia";
+            else if (liczba<0) document.getElementById("wynik").innerHTML="ujemna";
+            else if (liczba=="") document.getElementById("wynik").innerHTML="podaj jakąś liczbę";
+            else if (liczba==0) document.getElementById("wynik").innerHTML="zero";
+
+            else document.getElementById("wynik").innerHTML="to nie jest liczba";
         }
 
     </script>
@@ -18,10 +23,10 @@
 </head>
 <body>
 
-    <input type="text" id="pole">
-    <input type="submit">
+    <input type="text" id="pole"/>
+    <input type="submit" value="Sprawdź" onclick="sprawdz()"/>
 
-
+    <div id="wynik"></div>
 
 </body>
 </html>
